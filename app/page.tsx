@@ -50,6 +50,24 @@ export default function Home() {
           </a>
 
           <a
+            href="https://www.linkedin.com/in/julian-b-bbba61331/"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl border border-zinc-700 px-5 py-3 transition hover:border-zinc-500"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="/Julian%20Bartlett%20resume%202026%201.0.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl border border-zinc-700 px-5 py-3 transition hover:border-zinc-500"
+          >
+            Resume
+          </a>
+
+          <a
             href="#projects"
             className="rounded-xl border border-zinc-700 px-5 py-3 transition hover:border-zinc-500"
           >
@@ -58,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-24">
+      <section id="about" className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="text-3xl font-semibold md:text-4xl">About</h2>
         <p className="mt-6 max-w-3xl text-zinc-300">
           I am a Computer Science student focused on learning how to build
@@ -95,13 +113,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-24">
+      <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="text-3xl font-semibold md:text-4xl">Contact</h2>
         <p className="mt-6 text-zinc-300">
           Email: jdbartlett@aggies.ncat.edu
         </p>
         <p className="mt-2 text-zinc-300">
           GitHub: github.com/jdbartlett929
+        </p>
+        <p className="mt-2 text-zinc-300">
+          LinkedIn: linkedin.com/in/julian-b-bbba61331
         </p>
       </section>
     </main>
