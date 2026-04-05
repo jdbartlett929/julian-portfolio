@@ -59,7 +59,7 @@ export default function Home() {
           </a>
 
           <a
-            href="/Julian%20Bartlett%20resume%202026%201.0.pdf"
+            href="/Julian%20Bartlett%20resume%202026.pdf"
             target="_blank"
             rel="noreferrer"
             className="rounded-xl border border-zinc-700 px-5 py-3 transition hover:border-zinc-500"
