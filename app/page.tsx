@@ -31,10 +31,21 @@ const projects = [
   },
 ];
 
+const skills = [
+  "Python",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Linux",
+  "GitHub",
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Navbar />
+
       <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6">
         <p className="mb-4 text-sm uppercase tracking-[0.2em] text-zinc-400">
           Portfolio
@@ -44,7 +55,7 @@ export default function Home() {
           Julian Bartlett
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg text-zinc-300 md:text-xl">
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 md:text-xl">
           Computer Science student building practical projects in web
           development, Linux, and technical problem-solving.
         </p>
@@ -88,7 +99,7 @@ export default function Home() {
 
       <section id="about" className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="text-3xl font-semibold md:text-4xl">About</h2>
-        <p className="mt-6 max-w-3xl text-zinc-300">
+        <p className="mt-6 max-w-3xl leading-8 text-zinc-300">
           I am a Computer Science student focused on learning how to build
           useful software, strengthen my technical skills, and create projects
           that show real execution. I am especially interested in web
@@ -96,10 +107,10 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-24">
+      <section id="skills" className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="text-3xl font-semibold md:text-4xl">Skills</h2>
         <div className="mt-6 flex flex-wrap gap-3">
-          {["Python", "TypeScript", "React", "Next.js", "Tailwind CSS", "Linux", "GitHub"].map((skill) => (
+          {skills.map((skill) => (
             <span
               key={skill}
               className="rounded-full bg-zinc-900 px-4 py-2 text-sm text-zinc-200"
@@ -120,7 +131,9 @@ export default function Home() {
               className="rounded-2xl border border-zinc-800 p-6 transition hover:-translate-y-1"
             >
               <h3 className="text-2xl font-semibold">{project.title}</h3>
-              <p className="mt-3 text-zinc-300">{project.description}</p>
+              <p className="mt-3 leading-7 text-zinc-300">
+                {project.description}
+              </p>
 
               <div className="mt-5 flex flex-wrap gap-2">
                 {project.tech.map((item) => (
@@ -148,15 +161,11 @@ export default function Home() {
 
       <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="text-3xl font-semibold md:text-4xl">Contact</h2>
-        <p className="mt-6 text-zinc-300">
-          Email: jdbartlett@aggies.ncat.edu
-        </p>
-        <p className="mt-2 text-zinc-300">
-          GitHub: github.com/jdbartlett929
-        </p>
-        <p className="mt-2 text-zinc-300">
-          LinkedIn: linkedin.com/in/julian-b-bbba61331
-        </p>
+        <div className="mt-6 space-y-2 text-zinc-300">
+          <p>Email: jdbartlett@aggies.ncat.edu</p>
+          <p>GitHub: github.com/jdbartlett929</p>
+          <p>LinkedIn: linkedin.com/in/julian-b-bbba61331</p>
+        </div>
       </section>
     </main>
   );
