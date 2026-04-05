@@ -2,22 +2,32 @@ import Navbar from "@/components/Navbar";
 
 const projects = [
   {
-    title: "Linux Homelab",
+    title: "COMP163 Personal Portfolio",
     description:
-      "Built a virtualized Linux environment to practice system administration, networking, and security hardening.",
-    tech: ["Linux", "VirtualBox", "Bash"],
+      "A personal portfolio project built to present my work, technical growth, and web development progress.",
+    tech: ["Python"],
+    github: "https://github.com/jdbartlett929/comp163-personal-portfolio",
   },
   {
-    title: "Budget Tracker",
+    title: "COMP163 Assignment 6",
     description:
-      "Created a student budgeting app to organize spending and track monthly expenses.",
-    tech: ["TypeScript", "React", "Tailwind"],
+      "Built a contact information formatter that handles user input and formats contact details into clean output.",
+    tech: ["Python"],
+    github: "https://github.com/jdbartlett929/comp163-assignment-6",
   },
   {
-    title: "Portfolio Website",
+    title: "COMP163 Assignment 5",
     description:
-      "Designed and built a responsive personal portfolio to showcase projects, skills, and experience.",
-    tech: ["Next.js", "TypeScript", "Tailwind"],
+      "A Python programming assignment focused on logic, structure, and solving class-related coding problems.",
+    tech: ["Python"],
+    github: "https://github.com/jdbartlett929/comp163-assignment-5",
+  },
+  {
+    title: "COMP163 Assignment 4",
+    description:
+      "A Python class project demonstrating problem-solving, program flow, and foundational coding skills.",
+    tech: ["Python"],
+    github: "https://github.com/jdbartlett929/comp163-assignment-4",
   },
 ];
 
@@ -108,6 +118,15 @@ export default function Home() {
                   </span>
                 ))}
               </div>
+
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-block text-sm text-zinc-300 underline hover:text-white"
+              >
+                View on GitHub
+              </a>
             </div>
           ))}
         </div>
