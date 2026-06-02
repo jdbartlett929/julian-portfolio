@@ -188,11 +188,55 @@ export default function Home() {
       </section>
 
       <section id="contact" className="mx-auto max-w-5xl px-6 py-24">
-        <h2 className="text-3xl font-semibold md:text-4xl">Contact</h2>
-        <div className="mt-6 space-y-2 text-zinc-300">
-          <p>Email: jdbartlett@aggies.ncat.edu</p>
-          <p>GitHub: github.com/jdbartlett929</p>
-          <p>LinkedIn: linkedin.com/in/julian-b-bbba61331</p>
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-5xl font-light mb-8 leading-[1.05] tracking-[-0.04em]">
+              Let's build the
+              <span className="block text-[#00f5a0]">
+                future
+              </span>
+              together.
+            </h2>
+
+            <p className="body-text mb-8">Lets Connect.</p>
+
+            <div className="flex flex-col gap-3">
+              <a href="https://www.linkedin.com/in/julian-b-bbba61331/" target="_blank" rel="noreferrer" className="text-[#00f5a0] hover:text-white transition">
+                🔗 LinkedIn
+              </a>
+
+              <a href="https://github.com/jdbartlett929" target="_blank" rel="noreferrer" className="text-[#00f5a0] hover:text-white transition">
+                🔗 GitHub
+              </a>
+
+              <a href="mailto:jdbartlett@aggies.ncat.edu" className="text-[#00f5a0] hover:text-white transition">
+                🔗 Email
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm uppercase tracking-[0.35em] text-zinc-500 mb-2">Inquiry Type</label>
+                <select className="w-full bg-zinc-900 border border-zinc-700 rounded px-3 py-2 text-white">
+                  <option>General Collaboration</option>
+                  <option>Software Project</option>
+                  <option>Internship Opportunity</option>
+                  <option>Networking</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm uppercase tracking-[0.35em] text-zinc-500 mb-2">Message</label>
+                <textarea className="w-full bg-zinc-900 border border-zinc-700 rounded px-3 py-2 text-white h-24"></textarea>
+              </div>
+
+              <button type="submit" className="w-full bg-[#00f5a0] text-black py-2 rounded font-semibold hover:bg-[#00d478] transition">
+                Send Brief
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
