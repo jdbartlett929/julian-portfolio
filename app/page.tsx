@@ -24,11 +24,12 @@ const projects = [
     github: "https://github.com/jdbartlett929/comp163-assignment-5",
   },
   {
-    title: "COMP163 Assignment 4",
+    title: "CareerPilot",
     description:
-      "A Python class project demonstrating problem-solving, program flow, and foundational coding skills.",
-    tech: ["Python"],
-    github: "https://github.com/jdbartlett929/comp163-assignment-4",
+      "Full-stack career management platform built with Next.js, TypeScript, Tailwind CSS, and Supabase. Users can manage job applications, analyze resumes, track interviews, and organize their job search through a modern dashboard.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+    github: "https://github.com/jdbartlett929/careerpilot",
+    live: "https://careerpilot-tan.vercel.app",
   },
 ];
 
