@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import TechMarquee from "@/components/TechMarquee";
 
 const projects = [
   {
@@ -109,6 +110,8 @@ export default function Home() {
           development, Linux systems, and hands-on technical problem-solving.
         </p>
       </section>
+
+      <TechMarquee />
 
       <section id="skills" className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="text-3xl font-semibold md:text-4xl">Skills</h2>
