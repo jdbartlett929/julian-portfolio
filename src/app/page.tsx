@@ -9,11 +9,12 @@ const projects = [
     github: "https://github.com/jdbartlett929/comp163-personal-portfolio",
   },
   {
-    title: "COMP163 Assignment 6",
+    title: "Task Tracker",
     description:
-      "Built a contact information formatter that handles user input and formats contact details into clean output.",
-    tech: ["Python"],
-    github: "https://github.com/jdbartlett929/comp163-assignment-6",
+      "Full-stack task management application built with Next.js and Supabase authentication. Users can create accounts, sign up, and log in securely.",
+    technologies: ["Next.js", "TypeScript", "Supabase"],
+    github: "https://github.com/jdbartlett929/task-tracker",
+    live: "https://task-tracker-beta-indol.vercel.app"
   },
   {
     title: "COMP163 Assignment 5",
