@@ -12,7 +12,7 @@ const projects = [
     title: "Task Tracker",
     description:
       "Full-stack task management application built with Next.js and Supabase authentication. Users can create accounts, sign up, and log in securely.",
-    technologies: ["Next.js", "TypeScript", "Supabase"],
+    tech: ["Next.js", "TypeScript", "Supabase"],
     github: "https://github.com/jdbartlett929/task-tracker",
     live: "https://task-tracker-beta-indol.vercel.app"
   },
