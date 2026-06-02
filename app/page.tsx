@@ -47,63 +47,56 @@ const skills = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-[#050505] text-white">
       <Navbar />
 
       <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6">
-        <p className="mb-4 text-sm uppercase tracking-[0.2em] text-zinc-400">
-          Portfolio
-        </p>
+        <div className="mb-12">
+          <p className="section-label mb-8">
+            Based in NC
+          </p>
 
-        <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
-          Julian Bartlett
-        </h1>
+          <div className="mb-8">
+            <h1 className="max-w-2xl text-6xl font-light leading-[1.05] tracking-[-0.04em] md:text-7xl">
+              Julian Bartlett
+              <span className="block text-[#00f5a0]">
+                Software Engineer
+              </span>
+              & Full Stack Developer
+            </h1>
+          </div>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 md:text-xl">
-          Computer Science student building practical projects in web
-          development, Linux, and technical problem-solving.
-        </p>
+          <p className="body-text text-xl max-w-2xl mb-8">
+            Computer Science student building practical projects in web
+            development, Linux, and technical problem-solving.
+          </p>
 
-        <div className="mt-8 flex flex-wrap gap-4">
-          <a
-            href="https://github.com/jdbartlett929"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-xl bg-white px-5 py-3 text-black transition hover:opacity-90"
-          >
-            GitHub
-          </a>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              className="rounded-xl border border-[#00f5a0] text-[#00f5a0] px-6 py-3 transition hover:bg-[#00f5a0] hover:text-black"
+            >
+              View Projects →
+            </a>
 
-          <a
-            href="https://www.linkedin.com/in/julian-b-bbba61331/"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-xl border border-zinc-700 px-5 py-3 transition hover:border-zinc-500"
-          >
-            LinkedIn
-          </a>
+            <a
+              href="#contact"
+              className="rounded-xl border border-zinc-700 px-6 py-3 transition hover:border-zinc-500"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
 
-          <a
-            href="/Julian%20Bartlett%20resume%202026.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-xl border border-zinc-700 px-5 py-3 transition hover:border-zinc-500"
-          >
-            Resume
-          </a>
-
-          <a
-            href="#projects"
-            className="rounded-xl border border-zinc-700 px-5 py-3 transition hover:border-zinc-500"
-          >
-            View Projects
-          </a>
+        <div className="text-zinc-600 text-sm">
+          ↓
         </div>
       </section>
 
       <section id="about" className="mx-auto max-w-5xl px-6 py-24">
+        <p className="section-label mb-4">About</p>
         <h2 className="text-3xl font-semibold md:text-4xl">About</h2>
-        <p className="mt-6 max-w-3xl leading-8 text-zinc-300">
+        <p className="body-text text-xl max-w-2xl mt-6">
           I am a Computer Science student focused on learning how to build
           useful software, strengthen my technical skills, and create projects
           that show real execution. I am especially interested in web
@@ -114,12 +107,13 @@ export default function Home() {
       <TechMarquee />
 
       <section id="skills" className="mx-auto max-w-5xl px-6 py-24">
+        <p className="section-label mb-4">Skills</p>
         <h2 className="text-3xl font-semibold md:text-4xl">Skills</h2>
         <div className="mt-6 flex flex-wrap gap-3">
           {skills.map((skill) => (
             <span
               key={skill}
-              className="rounded-full bg-zinc-900 px-4 py-2 text-sm text-zinc-200"
+              className="elias-card px-4 py-2 text-sm"
             >
               {skill}
             </span>
@@ -127,39 +121,67 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="mx-auto max-w-5xl px-6 py-24">
-        <h2 className="text-3xl font-semibold md:text-4xl">Projects</h2>
+      <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mb-16 flex items-end justify-between">
+          <div>
+            <p className="section-label mb-4">Portfolio</p>
+            <h2 className="text-5xl font-light">Featured Projects.</h2>
+          </div>
+          <a href="#projects" className="text-sm text-[#00f5a0] hover:text-white transition">
+            View Projects →
+          </a>
+        </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="rounded-2xl border border-zinc-800 p-6 transition hover:-translate-y-1"
+              className="elias-card overflow-hidden rounded-lg flex flex-col transition hover:border-[#00f5a0] hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(16,185,129,0.2)]"
             >
-              <h3 className="text-2xl font-semibold">{project.title}</h3>
-              <p className="mt-3 leading-7 text-zinc-300">
-                {project.description}
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {project.tech.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full bg-zinc-900 px-3 py-1 text-sm text-zinc-200"
-                  >
-                    {item}
-                  </span>
-                ))}
+              <div className="h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center">
+                <p className="text-zinc-400 text-sm">{project.title}</p>
               </div>
 
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 inline-block text-sm text-zinc-300 underline hover:text-white"
-              >
-                View on GitHub
-              </a>
+              <div className="flex-1 p-6 flex flex-col">
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {project.tech.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-zinc-900 px-2 py-1 text-xs text-[#00f5a0] border border-zinc-700"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+
+                <p className="body-text text-sm flex-1 mb-6">
+                  {project.description}
+                </p>
+
+                <div className="flex gap-3 pt-4 border-t border-zinc-700">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 text-center text-sm text-[#00f5a0] hover:bg-zinc-900 py-2 rounded transition"
+                  >
+                    GitHub
+                  </a>
+
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 text-center text-sm text-[#00f5a0] hover:bg-zinc-900 py-2 rounded transition"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
           ))}
         </div>

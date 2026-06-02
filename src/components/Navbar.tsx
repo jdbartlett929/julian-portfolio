@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-800 bg-black/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/30 backdrop-blur-md">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a href="#" className="text-lg font-semibold tracking-tight text-white">
           Julian Bartlett
@@ -23,7 +23,7 @@ export default function Navbar() {
             Projects
           </a>
           <a href="#contact" className="transition hover:text-white">
-            Contact
+            Connect
           </a>
           <a
             href="https://github.com/jdbartlett929"
@@ -73,7 +73,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="transition hover:text-white"
             >
-              Contact
+              Connect
             </a>
             <a
               href="https://github.com/jdbartlett929"
