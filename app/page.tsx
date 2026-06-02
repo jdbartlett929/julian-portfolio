@@ -17,11 +17,12 @@ const projects = [
     live: "https://task-tracker-beta-indol.vercel.app"
   },
   {
-    title: "COMP163 Assignment 5",
+    title: "DevBoard",
     description:
-      "A Python programming assignment focused on logic, structure, and solving class-related coding problems.",
-    tech: ["Python"],
-    github: "https://github.com/jdbartlett929/comp163-assignment-5",
+      "Interactive GitHub analytics dashboard built with Next.js, TypeScript, Tailwind CSS, GitHub API, and Recharts. Visualizes repository metrics, language usage, and developer activity through a modern dashboard interface.",
+    tech: ["Next.js", "TypeScript", "GitHub API", "Recharts"],
+    github: "https://github.com/jdbartlett929/devboard",
+    live: "https://devboard-sooty.vercel.app",
   },
   {
     title: "CareerPilot",
