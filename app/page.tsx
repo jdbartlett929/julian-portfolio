@@ -12,7 +12,7 @@ const projects = [
   {
     title: "StreamVault",
     description:
-      "Netflix-inspired streaming dashboard built with Next.js, TypeScript, and Tailwind CSS. Includes a featured hero section, movie search, genre filtering, responsive movie cards, and a watchlist feature.",
+      "Netflix-inspired streaming dashboard built with Next.js, TypeScript, and Tailwind CSS. Includes movie cover cards, a featured hero section, search, genre filtering, responsive design, and a watchlist feature.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     github: "https://github.com/jdbartlett929/streamvault",
     live: "https://streamvault-self.vercel.app",
