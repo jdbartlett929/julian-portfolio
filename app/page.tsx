@@ -1,3 +1,4 @@
+import BaxAI from "@/components/BaxAI";
 import Navbar from "@/components/Navbar";
 import TechMarquee from "@/components/TechMarquee";
 
@@ -254,6 +255,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <BaxAI />
     </main>
   );
 }
