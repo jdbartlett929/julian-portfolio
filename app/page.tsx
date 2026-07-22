@@ -10,6 +10,14 @@ const projects = [
     github: "https://github.com/jdbartlett929/comp163-personal-portfolio",
   },
   {
+    title: "StreamVault",
+    description:
+      "Netflix-inspired streaming dashboard built with Next.js, TypeScript, and Tailwind CSS. Includes a featured hero section, movie search, genre filtering, responsive movie cards, and a watchlist feature.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    github: "https://github.com/jdbartlett929/streamvault",
+    live: "https://streamvault-self.vercel.app",
+  },
+  {
     title: "Task Tracker",
     description:
       "Full-stack task management application built with Next.js and Supabase authentication. Users can create accounts, sign up, and log in securely.",
