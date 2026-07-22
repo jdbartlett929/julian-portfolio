@@ -41,6 +41,13 @@ const projects = [
     github: "https://github.com/jdbartlett929/careerpilot",
     live: "https://careerpilot-tan.vercel.app",
   },
+  {
+    title: "FileGuard Pro",
+    description:
+      "Java desktop cybersecurity tool that creates SHA-256 file baselines, scans folders for tampering, detects modified, deleted, and newly added files, calculates risk levels, and exports security reports.",
+    tech: ["Java", "Swing", "SHA-256", "Cybersecurity", "File I/O"],
+    github: "https://github.com/jdbartlett929/fileguard-pro",
+  },
 ];
 
 const skills = [
