@@ -67,6 +67,15 @@ const projects = [
     image: "/project-images/aws-cloudqueue.png",
   },
   {
+    title: "Atlas Agent",
+    description:
+      "A no-key browser-local agent with conversational planning, text summarization, calculations, code-review tools, persistent history, and editable artifacts.",
+    tech: ["Next.js", "TypeScript", "React", "Tailwind CSS", "LocalStorage"],
+    github: "https://github.com/jdbartlett929/atlas-agent",
+    live: "https://atlas-agent-bice.vercel.app",
+    image: "/project-images/atlas-agent.png",
+  },
+  {
     title: "FileGuard Pro",
     description:
       "Java desktop cybersecurity tool that creates SHA-256 file baselines, scans folders for tampering, detects modified, deleted, and newly added files, calculates risk levels, and exports security reports.",
