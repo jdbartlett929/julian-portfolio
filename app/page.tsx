@@ -258,7 +258,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-5xl font-light mb-8 leading-[1.05] tracking-[-0.04em]">
-              Let's build the
+              Let&apos;s build the
               <span className="block text-[#00f5a0]">
                 future
               </span>

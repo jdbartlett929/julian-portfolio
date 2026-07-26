@@ -9,23 +9,32 @@ type Message = {
 
 const quickQuestions = [
   "Who is Julian?",
-  "What projects has he built?",
-  "Tell me about FileGuard Pro",
-  "Tell me about StreamVault",
+  "Which project should I view first?",
+  "Tell me about Aegis",
+  "What AWS experience does he have?",
   "What skills does Julian have?",
-  "How can I contact him?",
+  "Why should we interview him?",
 ];
 
 function getBaxAIResponse(input: string) {
   const message = input.toLowerCase();
 
   if (
-    message.includes("who") ||
-    message.includes("julian") ||
+    message.includes("view first") ||
+    message.includes("best project") ||
+    message.includes("strongest project") ||
+    message.includes("recommend")
+  ) {
+    return "Start with Aegis Command for voice interfaces and automation, CloudQueue for AWS architecture, and FileGuard Pro for Java and cybersecurity. Together, they show Julian can design polished interfaces, build practical logic, document architecture, test his work, and ship production deployments.";
+  }
+
+  if (
+    message.includes("who is julian") ||
+    message.includes("tell me about julian") ||
     message.includes("about you") ||
     message.includes("about him")
   ) {
-    return "Julian Bartlett is a developer focused on building practical software projects, cybersecurity tools, dashboards, and full-stack web applications. His portfolio includes projects built with Java, Next.js, TypeScript, Tailwind CSS, Supabase, GitHub, and Vercel.";
+    return "Julian Bartlett is a Computer Science student and developer focused on practical software, cloud architecture, automation, cybersecurity, and polished web applications. He builds complete projects, verifies them, documents the decisions, and deploys them publicly through GitHub and Vercel.";
   }
 
   if (
@@ -33,7 +42,42 @@ function getBaxAIResponse(input: string) {
     message.includes("built") ||
     message.includes("portfolio")
   ) {
-    return "Julian has built CareerPilot, FileGuard Pro, StreamVault, DevBoard, and Task Tracker. These projects show full-stack development, cybersecurity, dashboards, authentication, databases, UI design, and deployment experience.";
+    return "Julian’s portfolio includes Aegis Command, Atlas Agent, CloudQueue, Online Voting System, CareerPilot, FileGuard Pro, StreamVault, DevBoard, Task Tracker, and his personal portfolio. The work covers voice interfaces, browser automation, AWS serverless architecture, cybersecurity, analytics, state management, responsive UI, and production deployment.";
+  }
+
+  if (
+    message.includes("aegis") ||
+    message.includes("voice assistant") ||
+    message.includes("voice automation") ||
+    message.includes("command center")
+  ) {
+    return "Aegis Command is Julian’s original cinematic voice assistant and automation command center. It supports browser speech recognition, spoken responses, timers, task execution, notes, briefings, decision analysis, telemetry, and 1,600 natural-language command variations—all without an API key.";
+  }
+
+  if (
+    message.includes("atlas") ||
+    message.includes("local agent") ||
+    message.includes("ai agent")
+  ) {
+    return "Atlas Agent is a no-key browser-local assistant with conversational planning, summarization, calculations, deterministic code review, persistent chat history, and editable artifacts. Julian separated the command engine from the workspace UI so a server-side model provider could be added later.";
+  }
+
+  if (
+    message.includes("cloudqueue") ||
+    message.includes("cloud queue") ||
+    message.includes("aws") ||
+    message.includes("lambda") ||
+    message.includes("serverless")
+  ) {
+    return "CloudQueue is Julian’s AWS serverless file-processing project. It models an event-driven S3 → SQS → Lambda → DynamoDB → CloudWatch pipeline and includes an AWS SAM infrastructure template, Python Lambda worker, queue monitoring, retry behavior, service health, and clear documentation about its simulated public data.";
+  }
+
+  if (
+    message.includes("voting") ||
+    message.includes("election") ||
+    message.includes("civicpulse")
+  ) {
+    return "The Online Voting System is a clearly labeled fictional demonstration built with Next.js, TypeScript, React, Tailwind CSS, and LocalStorage. It includes four candidates, vote confirmation, one-vote-per-browser demo logic, live results, validation, accessible controls, and transparent warnings that it is not suitable for real elections.";
   }
 
   if (
@@ -61,7 +105,7 @@ function getBaxAIResponse(input: string) {
     message.includes("resume") ||
     message.includes("job")
   ) {
-    return "CareerPilot is a full-stack career tracking app built with Next.js, Tailwind CSS, and Supabase. It includes authentication, a protected dashboard, application tracking, and resume keyword analysis features.";
+    return "CareerPilot is an interactive career dashboard that opens directly for recruiters with no login barrier. Visitors can add applications, update pipeline stages, track interviews and offers, view response metrics, and use the resume keyword analyzer.";
   }
 
   if (
@@ -77,7 +121,7 @@ function getBaxAIResponse(input: string) {
     message.includes("tracker") ||
     message.includes("tasks")
   ) {
-    return "Task Tracker is a productivity app that lets users manage tasks through a clean interface. It demonstrates Julian’s ability to build CRUD features, manage state, and create useful web applications.";
+    return "Task Tracker is an instant-access productivity demo where visitors can create, prioritize, filter, complete, reopen, and remove project tasks. It demonstrates state management, validation, accessible controls, and responsive product design without requiring an account.";
   }
 
   if (
@@ -86,16 +130,24 @@ function getBaxAIResponse(input: string) {
     message.includes("language") ||
     message.includes("tools")
   ) {
-    return "Julian’s technical skills include Java, JavaScript, TypeScript, React, Next.js, Tailwind CSS, Supabase, SQL basics, Git, GitHub, Vercel, VS Code, Java Swing, file I/O, SHA-256 hashing, and responsive UI development.";
+    return "Julian’s technical toolkit includes Python, Java, JavaScript, TypeScript, React, Next.js, Tailwind CSS, AWS serverless services, AWS SAM, Git, GitHub, Vercel, Linux, Java Swing, file I/O, SHA-256 hashing, Web Speech APIs, LocalStorage, responsive design, accessibility, and browser-based testing.";
   }
 
   if (
     message.includes("contact") ||
     message.includes("email") ||
-    message.includes("hire") ||
     message.includes("reach")
   ) {
-    return "You can contact Julian through the contact section on this portfolio or view his work on GitHub at github.com/jdbartlett929.";
+    return "Julian can be reached at julbartl929@gmail.com. You can also use the contact section, view his work at github.com/jdbartlett929, or connect through the LinkedIn link on this portfolio.";
+  }
+
+  if (
+    message.includes("why") ||
+    message.includes("interview") ||
+    message.includes("hire") ||
+    message.includes("candidate")
+  ) {
+    return "Julian is worth interviewing because he consistently turns ideas into complete, public projects. His work shows breadth across web development, Java, cybersecurity, AWS architecture, automation, voice interfaces, testing, GitHub workflows, and deployment. He also explains limitations honestly and removes friction so reviewers can test each project immediately.";
   }
 
   if (
@@ -103,10 +155,10 @@ function getBaxAIResponse(input: string) {
     message.includes("work") ||
     message.includes("experience")
   ) {
-    return "Julian is interested in software development, cybersecurity, technical problem solving, dashboards, full-stack development, and practical engineering projects. His portfolio shows hands-on experience building and deploying real applications.";
+    return "Julian combines software projects with experience in technical troubleshooting, customer support, team leadership, and administrative operations. His Data Analyst internship work includes an AI and drone project focused on detecting humans in smoke and fire conditions. He is especially interested in software engineering, cloud systems, cybersecurity, automation, and technical problem-solving.";
   }
 
-  return "I can answer questions about Julian’s projects, technical skills, experience, GitHub, portfolio, and contact information. Try asking about FileGuard Pro, StreamVault, CareerPilot, DevBoard, or his coding skills.";
+  return "I can help you evaluate Julian’s projects, AWS and automation experience, technical skills, professional background, GitHub work, and contact information. Try asking which project to view first, why you should interview him, or about Aegis, CloudQueue, Atlas, FileGuard Pro, or the voting demo.";
 }
 
 export default function BaxAI() {
@@ -115,7 +167,7 @@ export default function BaxAI() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "bot",
-      text: "Hey, I’m Bax AI. Ask me about Julian’s projects, skills, experience, or contact info.",
+      text: "Hey, I’m Bax AI. I can help you explore Julian’s newest projects, AWS and automation work, technical skills, experience, and contact information.",
     },
   ]);
 
@@ -149,7 +201,7 @@ export default function BaxAI() {
     setMessages([
       {
         role: "bot",
-        text: "Chat reset. Ask me about Julian’s projects, skills, experience, or contact info.",
+        text: "Chat reset. Ask which project to view first, what Julian knows about AWS, or why he would be a strong interview candidate.",
       },
     ]);
   }
@@ -163,7 +215,7 @@ export default function BaxAI() {
               <div>
                 <h3 className="text-lg font-black text-white">Bax AI</h3>
                 <p className="text-xs font-medium text-zinc-300">
-                  Portfolio Assistant • Online
+                  Recruiter Portfolio Guide • Online
                 </p>
               </div>
 
