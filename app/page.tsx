@@ -43,6 +43,14 @@ const projects = [
     live: "https://careerpilot-tan.vercel.app",
   },
   {
+    title: "Online Voting System",
+    description:
+      "A responsive fictional election platform with one-vote-per-browser demo logic and live results.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "React", "LocalStorage"],
+    github: "https://github.com/jdbartlett929/online-voting-system",
+    live: "https://online-voting-system-ruby-nine.vercel.app",
+  },
+  {
     title: "FileGuard Pro",
     description:
       "Java desktop cybersecurity tool that creates SHA-256 file baselines, scans folders for tampering, detects modified, deleted, and newly added files, calculates risk levels, and exports security reports.",
