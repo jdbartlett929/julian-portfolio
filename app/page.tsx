@@ -1,6 +1,7 @@
 import BaxAI from "@/components/BaxAI";
 import Navbar from "@/components/Navbar";
 import TechMarquee from "@/components/TechMarquee";
+import Image from "next/image";
 
 const projects = [
   {
@@ -9,6 +10,7 @@ const projects = [
       "A personal portfolio project built to present my work, technical growth, and web development progress.",
     tech: ["Python"],
     github: "https://github.com/jdbartlett929/comp163-personal-portfolio",
+    image: "/project-images/comp163.png",
   },
   {
     title: "StreamVault",
@@ -17,6 +19,7 @@ const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     github: "https://github.com/jdbartlett929/streamvault",
     live: "https://streamvault-self.vercel.app",
+    image: "/project-images/streamvault.png",
   },
   {
     title: "Task Tracker",
@@ -24,7 +27,8 @@ const projects = [
       "Full-stack task management application built with Next.js and Supabase authentication. Users can create accounts, sign up, and log in securely.",
     tech: ["Next.js", "TypeScript", "Supabase"],
     github: "https://github.com/jdbartlett929/task-tracker",
-    live: "https://task-tracker-beta-indol.vercel.app"
+    live: "https://task-tracker-beta-indol.vercel.app",
+    image: "/project-images/task-tracker.png",
   },
   {
     title: "DevBoard",
@@ -33,6 +37,7 @@ const projects = [
     tech: ["Next.js", "TypeScript", "GitHub API", "Recharts"],
     github: "https://github.com/jdbartlett929/devboard",
     live: "https://devboard-sooty.vercel.app",
+    image: "/project-images/devboard.png",
   },
   {
     title: "CareerPilot",
@@ -41,6 +46,7 @@ const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
     github: "https://github.com/jdbartlett929/careerpilot",
     live: "https://careerpilot-tan.vercel.app",
+    image: "/project-images/careerpilot.png",
   },
   {
     title: "Online Voting System",
@@ -49,6 +55,7 @@ const projects = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "React", "LocalStorage"],
     github: "https://github.com/jdbartlett929/online-voting-system",
     live: "https://online-voting-system-ruby-nine.vercel.app",
+    image: "/project-images/online-voting-system.png",
   },
   {
     title: "FileGuard Pro",
@@ -56,6 +63,7 @@ const projects = [
       "Java desktop cybersecurity tool that creates SHA-256 file baselines, scans folders for tampering, detects modified, deleted, and newly added files, calculates risk levels, and exports security reports.",
     tech: ["Java", "Swing", "SHA-256", "Cybersecurity", "File I/O"],
     github: "https://github.com/jdbartlett929/fileguard-pro",
+    image: "/project-images/fileguard-pro.png",
   },
 ];
 
@@ -160,10 +168,17 @@ export default function Home() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="elias-card overflow-hidden rounded-lg flex flex-col transition hover:border-[#00f5a0] hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(16,185,129,0.2)]"
+              className="elias-card group overflow-hidden rounded-lg flex flex-col transition hover:border-[#00f5a0] hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(16,185,129,0.2)]"
             >
-              <div className="h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center">
-                <p className="text-zinc-400 text-sm">{project.title}</p>
+              <div className="relative h-48 overflow-hidden border-b border-zinc-800 bg-zinc-900">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} project preview`}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover object-top transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
               </div>
 
               <div className="flex-1 p-6 flex flex-col">
