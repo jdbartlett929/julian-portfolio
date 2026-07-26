@@ -58,6 +58,15 @@ const projects = [
     image: "/project-images/online-voting-system.png",
   },
   {
+    title: "CloudQueue",
+    description:
+      "AWS serverless file-processing and operations dashboard with an event-driven S3, SQS, Lambda, DynamoDB, and CloudWatch architecture.",
+    tech: ["AWS", "Next.js", "TypeScript", "Lambda", "S3", "SQS"],
+    github: "https://github.com/jdbartlett929/aws-cloudqueue",
+    live: "https://aws-cloudqueue.vercel.app",
+    image: "/project-images/aws-cloudqueue.png",
+  },
+  {
     title: "FileGuard Pro",
     description:
       "Java desktop cybersecurity tool that creates SHA-256 file baselines, scans folders for tampering, detects modified, deleted, and newly added files, calculates risk levels, and exports security reports.",
@@ -73,6 +82,7 @@ const skills = [
   "React",
   "Next.js",
   "Tailwind CSS",
+  "AWS",
   "Linux",
   "GitHub",
 ];
