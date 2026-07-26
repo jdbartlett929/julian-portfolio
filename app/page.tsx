@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "COMP163 Personal Portfolio",
+    title: "Personal Portfolio",
     description:
       "A personal portfolio project built to present my work, technical growth, and web development progress.",
     tech: ["Python"],
