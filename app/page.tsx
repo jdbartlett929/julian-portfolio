@@ -24,8 +24,8 @@ const projects = [
   {
     title: "Task Tracker",
     description:
-      "Full-stack task management application built with Next.js and Supabase authentication. Users can create accounts, sign up, and log in securely.",
-    tech: ["Next.js", "TypeScript", "Supabase"],
+      "Interactive task management demo where visitors can create, prioritize, filter, complete, and remove project tasks instantly.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     github: "https://github.com/jdbartlett929/task-tracker",
     live: "https://task-tracker-beta-indol.vercel.app",
     image: "/project-images/task-tracker.png",
@@ -42,8 +42,8 @@ const projects = [
   {
     title: "CareerPilot",
     description:
-      "Full-stack career management platform built with Next.js, TypeScript, Tailwind CSS, and Supabase. Users can manage job applications, analyze resumes, track interviews, and organize their job search through a modern dashboard.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+      "Interactive career dashboard for managing job applications, tracking interviews and offers, and analyzing resume keywords.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     github: "https://github.com/jdbartlett929/careerpilot",
     live: "https://careerpilot-tan.vercel.app",
     image: "/project-images/careerpilot.png",
