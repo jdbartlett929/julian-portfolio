@@ -76,6 +76,15 @@ const projects = [
     image: "/project-images/atlas-agent.png",
   },
   {
+    title: "Aegis Command",
+    description:
+      "An original cinematic voice assistant and automation command center with speech recognition, spoken responses, timers, task execution, briefings, and decision analysis.",
+    tech: ["Next.js", "TypeScript", "React", "Web Speech API", "Automation"],
+    github: "https://github.com/jdbartlett929/aegis-command",
+    live: "https://aegis-command-murex.vercel.app",
+    image: "/project-images/aegis-command.png",
+  },
+  {
     title: "FileGuard Pro",
     description:
       "Java desktop cybersecurity tool that creates SHA-256 file baselines, scans folders for tampering, detects modified, deleted, and newly added files, calculates risk levels, and exports security reports.",
