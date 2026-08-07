@@ -5,6 +5,15 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "LedgerLens for Excel",
+    description:
+      "A finance-focused Microsoft Excel add-in with one-click formulas, credit analysis, chart generation, data cleanup, risk flags, and executive summaries.",
+    tech: ["TypeScript", "React", "Office.js", "Excel API", "Vite"],
+    github: "https://github.com/jdbartlett929/ledgerlens-excel-addin",
+    live: "https://ledgerlens-excel-addin.vercel.app",
+    image: "/project-images/ledgerlens-excel.png",
+  },
+  {
     title: "Personal Portfolio",
     description:
       "A personal portfolio project built to present my work, technical growth, and web development progress.",
