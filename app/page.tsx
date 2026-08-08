@@ -5,6 +5,32 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "ResolveAI",
+    description:
+      "A smart issue operations platform with AI-generated impact summaries, next actions, protected routes, signed HttpOnly sessions, session rotation, validation, and rate limiting.",
+    tech: ["Next.js", "TypeScript", "React", "AI Summaries", "Secure Sessions"],
+    github: "https://github.com/jdbartlett929/resolve-ai",
+    live: "https://resolve-ai.vercel.app",
+    image: "/project-images/resolve-ai.png",
+  },
+  {
+    title: "Neural Relay",
+    description:
+      "A real-time LLM operations console with WebSocket streaming, model adapters, correlation IDs, telemetry, event tracing, heartbeats, and automatic reconnection.",
+    tech: ["React", "TypeScript", "WebSockets", "Node.js", "LLM Systems"],
+    github: "https://github.com/jdbartlett929/neural-relay",
+    live: "https://neural-relay.vercel.app",
+    image: "/project-images/neural-relay.png",
+  },
+  {
+    title: "Drone Fire Intelligence",
+    description:
+      "A multi-model computer-vision pipeline for normal and thermal drone footage that detects people, vehicles, fire, and thermal targets, then classifies operational risk and records evidence.",
+    tech: ["Python", "OpenCV", "YOLOv8", "scikit-learn", "DVC"],
+    github: "https://github.com/jdbartlett929/drone-fire-intelligence",
+    image: "/project-images/drone-fire-intelligence.jpg",
+  },
+  {
     title: "LedgerLens for Excel",
     description:
       "A finance-focused Microsoft Excel add-in with one-click formulas, credit analysis, chart generation, data cleanup, risk flags, and executive summaries.",
