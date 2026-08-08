@@ -10,7 +10,7 @@ const projects = [
       "A smart issue operations platform with AI-generated impact summaries, next actions, protected routes, signed HttpOnly sessions, session rotation, validation, and rate limiting.",
     tech: ["Next.js", "TypeScript", "React", "AI Summaries", "Secure Sessions"],
     github: "https://github.com/jdbartlett929/resolve-ai",
-    live: "https://resolve-ai.vercel.app",
+    live: "https://resolve-ai-pearl.vercel.app",
     image: "/project-images/resolve-ai.png",
   },
   {
