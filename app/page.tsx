@@ -10,7 +10,7 @@ const projects = [
     tech: ["Next.js", "Sports API", "OpenAI", "Whisper", "FFmpeg"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/world-cup-recap",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/world-cup-recap.png",
   },
   {
     title: "AI Apartment Hunter",
@@ -18,7 +18,7 @@ const projects = [
     tech: ["Next.js", "PostgreSQL", "Maps API", "OpenAI"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/apartment-hunter",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/apartment-hunter.png",
   },
   {
     title: "AI Spending Analyzer",
@@ -26,7 +26,7 @@ const projects = [
     tech: ["Python", "React", "PostgreSQL", "OpenAI"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/spending-analyzer",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/spending-analyzer.png",
   },
   {
     title: "AI Closet & Outfit Planner",
@@ -34,7 +34,7 @@ const projects = [
     tech: ["React Native", "Vision API", "Weather API", "Supabase"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/outfit-planner",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/outfit-planner.png",
   },
   {
     title: "AI Job Search Agent",
@@ -42,7 +42,7 @@ const projects = [
     tech: ["Python", "Browserbase", "OpenAI", "PostgreSQL"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/job-search-agent",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/job-search-agent.png",
   },
   {
     title: "AI GitHub Issue Agent",
@@ -50,7 +50,7 @@ const projects = [
     tech: ["GitHub API", "Python", "OpenAI", "Docker"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/github-issue-agent",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/github-issue-agent.png",
   },
   {
     title: "Personal MCP Assistant",
@@ -58,7 +58,7 @@ const projects = [
     tech: ["TypeScript", "MCP SDK", "OpenAI", "PostgreSQL"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/personal-mcp-assistant",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/personal-mcp-assistant.png",
   },
   {
     title: "Real-Time AI Interview Coach",
@@ -66,7 +66,7 @@ const projects = [
     tech: ["Realtime API", "WebRTC", "React", "FastAPI"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/interview-coach",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/interview-coach.png",
   },
   {
     title: "Secondhand Shopping Search",
@@ -74,7 +74,7 @@ const projects = [
     tech: ["React Native", "Embeddings", "Vector DB", "Marketplace API"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/secondhand-search",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/secondhand-search.png",
   },
   {
     title: "AI Travel Planner",
@@ -82,7 +82,7 @@ const projects = [
     tech: ["Next.js", "OpenAI", "Maps API"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/travel-planner",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/travel-planner.png",
   },
   {
     title: "Campus Study Spot Finder",
@@ -90,7 +90,7 @@ const projects = [
     tech: ["Next.js", "Maps API", "PostgreSQL"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/study-spot-finder",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/study-spot-finder.png",
   },
   {
     title: "Habit Garden",
@@ -98,7 +98,7 @@ const projects = [
     tech: ["Next.js", "PostgreSQL"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/habit-garden",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/habit-garden.png",
   },
   {
     title: "Concert & Festival Finder",
@@ -106,7 +106,7 @@ const projects = [
     tech: ["React", "Ticketmaster API", "Firebase"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/concert-finder",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/concert-finder.png",
   },
   {
     title: "Coffee Shop Finder",
@@ -114,7 +114,7 @@ const projects = [
     tech: ["Next.js", "Maps API", "PostgreSQL"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/coffee-finder",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/coffee-finder.png",
   },
   {
     title: "Hiking Trail Explorer",
@@ -122,7 +122,7 @@ const projects = [
     tech: ["React", "Hiking API", "Firebase"],
     github: "https://github.com/jdbartlett929/ai-product-lab",
     live: "https://ai-product-lab-psi.vercel.app/projects/trail-explorer",
-    image: "/project-images/ai-product-lab.png",
+    image: "/project-images/trail-explorer.png",
   },
   {
     title: "ResolveAI",
