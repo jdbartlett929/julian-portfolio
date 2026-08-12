@@ -5,6 +5,126 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "AI World Cup Recap Generator",
+    description: "An interactive sports storytelling tool that creates team or player recaps with key statistics, defining moments, and a highlight-editing pipeline design.",
+    tech: ["Next.js", "Sports API", "OpenAI", "Whisper", "FFmpeg"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/world-cup-recap",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "AI Apartment Hunter",
+    description: "A ranked apartment-search dashboard that compares realistic listings against budget, neighborhood priorities, commute, and potential red flags.",
+    tech: ["Next.js", "PostgreSQL", "Maps API", "OpenAI"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/apartment-hunter",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "AI Spending Analyzer",
+    description: "A financial analysis workflow that identifies recurring subscriptions, spending patterns, and practical monthly savings opportunities.",
+    tech: ["Python", "React", "PostgreSQL", "OpenAI"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/spending-analyzer",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "AI Closet & Outfit Planner",
+    description: "A weather-aware digital closet that creates outfits while resurfacing clothes that have not been worn recently.",
+    tech: ["React Native", "Vision API", "Weather API", "Supabase"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/outfit-planner",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "AI Job Search Agent",
+    description: "A recruiter-ready agent workflow that matches a resume to relevant openings, explains fit, and organizes application deadlines.",
+    tech: ["Python", "Browserbase", "OpenAI", "PostgreSQL"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/job-search-agent",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "AI GitHub Issue Agent",
+    description: "An engineering agent that traces an issue through a repository, locates relevant files, proposes a fix, and prepares draft-PR checks.",
+    tech: ["GitHub API", "Python", "OpenAI", "Docker"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/github-issue-agent",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "Personal MCP Assistant",
+    description: "A context-aware assistant that combines calendar and notes information through a transparent MCP-style tool workflow.",
+    tech: ["TypeScript", "MCP SDK", "OpenAI", "PostgreSQL"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/personal-mcp-assistant",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "Real-Time AI Interview Coach",
+    description: "A voice-interview practice experience with adaptive follow-up questions, structured feedback, and a live communication scorecard.",
+    tech: ["Realtime API", "WebRTC", "React", "FastAPI"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/interview-coach",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "Secondhand Shopping Search",
+    description: "A visual resale discovery workflow that ranks similar secondhand listings by appearance, condition, and value.",
+    tech: ["React Native", "Embeddings", "Vector DB", "Marketplace API"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/secondhand-search",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "AI Travel Planner",
+    description: "A complete trip builder with budget allocation, restaurants, places to visit, and a saved day-by-day itinerary.",
+    tech: ["Next.js", "OpenAI", "Maps API"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/travel-planner",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "Campus Study Spot Finder",
+    description: "A student-focused campus search tool ranking study spaces by noise, Wi-Fi, outlets, crowd level, and hours.",
+    tech: ["Next.js", "Maps API", "PostgreSQL"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/study-spot-finder",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "Habit Garden",
+    description: "A habit tracker where daily completions grow a virtual garden, preserve streaks, and unlock new plants.",
+    tech: ["Next.js", "PostgreSQL"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/habit-garden",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "Concert & Festival Finder",
+    description: "A personalized live-events discovery tool with followed artists, saved shows, pricing, and calendar-ready plans.",
+    tech: ["React", "Ticketmaster API", "Firebase"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/concert-finder",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "Coffee Shop Finder",
+    description: "A café search experience with practical filters for Wi-Fi, outlets, noise, seating, distance, and reviews.",
+    tech: ["Next.js", "Maps API", "PostgreSQL"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/coffee-finder",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
+    title: "Hiking Trail Explorer",
+    description: "A trail discovery dashboard with difficulty, elevation, weather, saved hikes, and progress tracking.",
+    tech: ["React", "Hiking API", "Firebase"],
+    github: "https://github.com/jdbartlett929/ai-product-lab",
+    live: "https://ai-product-lab-psi.vercel.app/projects/trail-explorer",
+    image: "/project-images/ai-product-lab.png",
+  },
+  {
     title: "ResolveAI",
     description:
       "A smart issue operations platform with AI-generated impact summaries, next actions, protected routes, signed HttpOnly sessions, session rotation, validation, and rate limiting.",
@@ -140,6 +260,15 @@ const skills = [
   "GitHub",
 ];
 
+const badgeColors = ["#00f5a0", "#60a5fa", "#fbbf24", "#f472b6", "#a78bfa", "#22d3ee"];
+
+function projectBadge(title: string) {
+  const words = title.replace(/AI|Real-Time/gi, "").trim().split(/\s+/);
+  const mark = words.slice(0, 2).map((word) => word[0]).join("").toUpperCase();
+  const color = badgeColors[title.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0) % badgeColors.length];
+  return { mark: mark || "JB", color };
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#050505] text-white">
@@ -242,6 +371,13 @@ export default function Home() {
                   className="object-cover object-top transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+                <div
+                  className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-xl border bg-black/80 text-xs font-bold shadow-lg backdrop-blur"
+                  style={{ borderColor: projectBadge(project.title).color, color: projectBadge(project.title).color }}
+                  aria-label={`${project.title} custom logo`}
+                >
+                  {projectBadge(project.title).mark}
+                </div>
               </div>
 
               <div className="flex-1 p-6 flex flex-col">
