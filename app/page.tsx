@@ -260,15 +260,6 @@ const skills = [
   "GitHub",
 ];
 
-const badgeColors = ["#00f5a0", "#60a5fa", "#fbbf24", "#f472b6", "#a78bfa", "#22d3ee"];
-
-function projectBadge(title: string) {
-  const words = title.replace(/AI|Real-Time/gi, "").trim().split(/\s+/);
-  const mark = words.slice(0, 2).map((word) => word[0]).join("").toUpperCase();
-  const color = badgeColors[title.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0) % badgeColors.length];
-  return { mark: mark || "JB", color };
-}
-
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#050505] text-white">
@@ -371,13 +362,6 @@ export default function Home() {
                   className="object-cover object-top transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-                <div
-                  className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-xl border bg-black/80 text-xs font-bold shadow-lg backdrop-blur"
-                  style={{ borderColor: projectBadge(project.title).color, color: projectBadge(project.title).color }}
-                  aria-label={`${project.title} custom logo`}
-                >
-                  {projectBadge(project.title).mark}
-                </div>
               </div>
 
               <div className="flex-1 p-6 flex flex-col">
