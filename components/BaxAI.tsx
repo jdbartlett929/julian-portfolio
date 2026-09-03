@@ -9,10 +9,10 @@ type Message = {
 
 const quickQuestions = [
   "Who is Julian?",
-  "Which project should I view first?",
-  "Tell me about Aegis",
-  "What AWS experience does he have?",
-  "What skills does Julian have?",
+  "What is Bax OS?",
+  "How does the stock predictor work?",
+  "What is the LLM regression system?",
+  "How does the spending tracker categorize transactions?",
   "Why should we interview him?",
 ];
 
@@ -38,11 +38,48 @@ function getBaxAIResponse(input: string) {
   }
 
   if (
+    message.includes("bax os") ||
+    message.includes("hobby operating") ||
+    message.includes("kernel") ||
+    message.includes("bootloader")
+  ) {
+    return "Bax OS is Julian’s educational x86_64 hobby operating system. A 512-byte BIOS boot sector loads a freestanding C kernel, establishes identity-mapped paging, and enters 64-bit long mode. The source includes VGA and COM1 output, an IDT with PIC remapping, PIT timer code, PS/2 keyboard input, and a shell with help, clear, about, and uptime commands. The image compiles successfully; native QEMU runtime verification is still documented as pending.";
+  }
+
+  if (
+    message.includes("stock predictor") ||
+    message.includes("stock market") ||
+    message.includes("random forest") ||
+    message.includes("machine learning model")
+  ) {
+    return "The Stock Market Predictor is a Next.js and Python research dashboard for next-day AAPL direction. It uses a scikit-learn RandomForestClassifier with lagged returns, moving-average distance, volatility, volume change, RSI, intraday range, and previous close. The split is chronological with no shuffle or look-ahead leakage. Its measured test accuracy is 41.84%, below the 52.04% directional baseline, and the dashboard reports that result honestly alongside precision, recall, F1, feature importance, and a confusion matrix.";
+  }
+
+  if (
+    message.includes("llm regression") ||
+    message.includes("golden dataset") ||
+    message.includes("sentinel") ||
+    message.includes("quality gate")
+  ) {
+    return "The LLM Regression Detection System, called Sentinel, is an offline CI quality gate for prompt and adapter changes. Its eight-case JSONL golden dataset specifies exact matches, required and forbidden keywords, regex checks, labels, JSON validity and schema, custom assertions, critical cases, and latency. A deterministic mock adapter makes the whole pipeline free to run locally and in GitHub Actions. The included regressed version drops from a 100% baseline to 62.5%, creates three new failures, and is correctly blocked.";
+  }
+
+  if (
+    message.includes("spending tracker") ||
+    message.includes("ledger local") ||
+    message.includes("categorize transaction") ||
+    message.includes("recurring charge") ||
+    message.includes("bank statement")
+  ) {
+    return "The Spending Tracker, called Ledger Local, parses CSV statements entirely in the browser. Transparent merchant regex rules assign 16 categories, and every category remains manually editable. It separates spending, income, refunds, and obvious transfers, then marks likely subscriptions when the same normalized merchant and similar amount recur 25 to 36 days apart. Transactions stay only in that browser’s localStorage and are not sent to a server or third-party AI service.";
+  }
+
+  if (
     message.includes("project") ||
     message.includes("built") ||
     message.includes("portfolio")
   ) {
-    return "Julian’s portfolio includes Aegis Command, Atlas Agent, CloudQueue, Online Voting System, CareerPilot, FileGuard Pro, StreamVault, DevBoard, Task Tracker, and his personal portfolio. The work covers voice interfaces, browser automation, AWS serverless architecture, cybersecurity, analytics, state management, responsive UI, and production deployment.";
+    return "Julian’s portfolio includes Bax OS, the Stock Market Predictor, Sentinel LLM Regression Guard, Ledger Local Spending Tracker, Aegis Command, Atlas Agent, CloudQueue, Online Voting System, CareerPilot, FileGuard Pro, StreamVault, DevBoard, Task Tracker, and his personal portfolio. The work spans operating systems, machine learning, CI evaluation, privacy-focused financial tooling, voice interfaces, browser automation, AWS architecture, cybersecurity, analytics, responsive UI, and production deployment.";
   }
 
   if (
@@ -130,7 +167,7 @@ function getBaxAIResponse(input: string) {
     message.includes("language") ||
     message.includes("tools")
   ) {
-    return "Julian’s technical toolkit includes Python, Java, JavaScript, TypeScript, React, Next.js, Tailwind CSS, AWS serverless services, AWS SAM, Git, GitHub, Vercel, Linux, Java Swing, file I/O, SHA-256 hashing, Web Speech APIs, LocalStorage, responsive design, accessibility, and browser-based testing.";
+    return "Julian’s technical toolkit includes C, x86_64 assembly, Python, scikit-learn, Java, JavaScript, TypeScript, React, Next.js, Tailwind CSS, GitHub Actions, AWS serverless services, AWS SAM, Git, Vercel, Linux, Java Swing, SHA-256 hashing, Web Speech APIs, LocalStorage, responsive design, accessibility, and browser-based testing.";
   }
 
   if (
@@ -158,7 +195,7 @@ function getBaxAIResponse(input: string) {
     return "Julian combines software projects with experience in technical troubleshooting, customer support, team leadership, and administrative operations. His Data Analyst internship work includes an AI and drone project focused on detecting humans in smoke and fire conditions. He is especially interested in software engineering, cloud systems, cybersecurity, automation, and technical problem-solving.";
   }
 
-  return "I can help you evaluate Julian’s projects, AWS and automation experience, technical skills, professional background, GitHub work, and contact information. Try asking which project to view first, why you should interview him, or about Aegis, CloudQueue, Atlas, FileGuard Pro, or the voting demo.";
+  return "I can help you evaluate Julian’s projects, systems and ML work, CI engineering, privacy-focused tools, AWS and automation experience, technical skills, professional background, GitHub work, and contact information. Try asking about Bax OS, the Stock Market Predictor, the LLM regression system, Ledger Local, or why Julian would be a strong interview candidate.";
 }
 
 export default function BaxAI() {
@@ -167,7 +204,7 @@ export default function BaxAI() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "bot",
-      text: "Hey, I’m Bax AI. I can help you explore Julian’s newest projects, AWS and automation work, technical skills, experience, and contact information.",
+      text: "Hey, I’m Bax AI. I can help you explore Julian’s newest systems, ML, CI, privacy, AWS, and automation projects, plus his technical skills, experience, and contact information.",
     },
   ]);
 
@@ -201,7 +238,7 @@ export default function BaxAI() {
     setMessages([
       {
         role: "bot",
-        text: "Chat reset. Ask which project to view first, what Julian knows about AWS, or why he would be a strong interview candidate.",
+        text: "Chat reset. Ask about Bax OS, the stock predictor, the LLM regression system, the spending tracker, or why Julian would be a strong interview candidate.",
       },
     ]);
   }
