@@ -304,228 +304,64 @@ export default function Home() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {projects.map((project) => {
-            if (project.title === "Stock Market Predictor") {
-              return (
-                <article
-                  key={project.title}
-                  className="group overflow-hidden rounded-[2rem] border border-emerald-400/30 bg-[#07130f] md:col-span-2 transition duration-500 hover:border-emerald-300/70 hover:shadow-[0_24px_80px_rgba(0,245,160,0.14)]"
-                >
-                  <div className="grid h-full md:grid-cols-[1.25fr_.75fr]">
-                    <div className="relative min-h-[320px] overflow-hidden border-b border-emerald-400/20 md:border-b-0 md:border-r">
-                      <Image
-                        src={project.image}
-                        alt={`${project.title} project preview`}
-                        fill
-                        sizes="(min-width: 768px) 50vw, 100vw"
-                        className="object-cover object-top opacity-75 transition duration-700 group-hover:scale-[1.03] group-hover:opacity-95"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#03100b] via-transparent to-black/15" />
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="elias-card group overflow-hidden rounded-lg flex flex-col transition hover:border-[#00f5a0] hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(16,185,129,0.2)]"
+            >
+              <div className="relative h-48 overflow-hidden border-b border-zinc-800 bg-zinc-900">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} project preview`}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover object-top transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+              </div>
 
-                      <div className="absolute left-5 right-5 top-5 flex items-center justify-between font-mono text-[10px] tracking-[0.2em] text-emerald-100">
-                        <span className="rounded-full border border-emerald-300/30 bg-black/70 px-3 py-2 backdrop-blur">
-                          MARKET SIGNAL / AAPL
-                        </span>
-                        <span className="rounded-full bg-[#00f5a0] px-3 py-2 font-semibold text-black">
-                          RF-01
-                        </span>
-                      </div>
-
-                      <div className="absolute bottom-5 left-5 right-5 grid grid-cols-3 overflow-hidden rounded-2xl border border-emerald-300/20 bg-black/80 font-mono backdrop-blur">
-                        <div className="p-3">
-                          <p className="text-[9px] uppercase tracking-widest text-zinc-500">Ticker</p>
-                          <p className="mt-1 text-lg text-[#00f5a0]">AAPL</p>
-                        </div>
-                        <div className="border-x border-emerald-300/15 p-3">
-                          <p className="text-[9px] uppercase tracking-widest text-zinc-500">Horizon</p>
-                          <p className="mt-1 text-lg text-white">T+1</p>
-                        </div>
-                        <div className="p-3">
-                          <p className="text-[9px] uppercase tracking-widest text-zinc-500">Split</p>
-                          <p className="mt-1 text-sm text-white">Time-aware</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col p-7 md:p-8">
-                      <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-[#00f5a0]">
-                        Time-aware ML system
-                      </p>
-                      <h3 className="text-3xl font-light leading-tight tracking-[-0.035em]">
-                        {project.title}
-                      </h3>
-                      <p className="body-text mb-7 mt-4 text-sm leading-6">
-                        {project.description}
-                      </p>
-
-                      <div className="mb-8 flex flex-wrap gap-x-4 gap-y-2 font-mono text-[10px] uppercase tracking-wider text-emerald-200/80">
-                        {project.tech.map((item) => (
-                          <span key={item}>+ {item}</span>
-                        ))}
-                      </div>
-
-                      <div className="mt-auto grid grid-cols-2 gap-3">
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="rounded-full border border-emerald-300/30 px-4 py-3 text-center text-xs transition hover:border-[#00f5a0] hover:text-[#00f5a0]"
-                        >
-                          View source
-                        </a>
-                        {project.live ? (
-                          <a
-                            href={project.live}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="rounded-full bg-[#00f5a0] px-4 py-3 text-center text-xs font-semibold text-black transition hover:bg-white"
-                          >
-                            Open dashboard ↗
-                          </a>
-                        ) : null}
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              );
-            }
-
-            if (project.title === "LLM Regression Detection System") {
-              return (
-                <article
-                  key={project.title}
-                  className="group flex flex-col overflow-hidden border border-rose-400/35 bg-[#130b0d] transition duration-500 hover:border-rose-300/70 hover:shadow-[12px_12px_0_rgba(244,63,94,0.12)]"
-                >
-                  <div className="flex items-center justify-between border-b border-rose-300/20 bg-rose-500/5 px-4 py-3 font-mono text-[9px] uppercase tracking-[0.2em]">
-                    <span className="text-zinc-400">Sentinel / CI gate</span>
-                    <span className="text-rose-300">● Merge blocked</span>
-                  </div>
-
-                  <div className="relative h-44 overflow-hidden border-b border-rose-300/20">
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} project preview`}
-                      fill
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover object-top opacity-55 grayscale-[35%] transition duration-500 group-hover:scale-105 group-hover:opacity-75"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#130b0d] via-[#130b0d]/25 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between font-mono">
-                      <div>
-                        <p className="text-[9px] uppercase tracking-widest text-zinc-500">Baseline</p>
-                        <p className="text-2xl text-white">100.0%</p>
-                      </div>
-                      <span className="pb-1 text-rose-300">→</span>
-                      <div className="text-right">
-                        <p className="text-[9px] uppercase tracking-widest text-zinc-500">Candidate</p>
-                        <p className="text-3xl text-rose-300">62.5%</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-1 flex-col p-6">
-                    <div className="mb-5 flex items-center justify-between border-b border-rose-300/15 pb-4 font-mono text-[10px] uppercase tracking-wider">
-                      <span className="text-rose-300">3 new failures</span>
-                      <span className="text-zinc-500">2 critical</span>
-                    </div>
-                    <h3 className="text-2xl font-semibold leading-tight">{project.title}</h3>
-                    <p className="body-text my-4 text-sm leading-6">{project.description}</p>
-
-                    <div className="mb-6 flex flex-wrap gap-2">
-                      {project.tech.map((item) => (
-                        <span
-                          key={item}
-                          className="border border-rose-300/20 bg-rose-500/5 px-2 py-1 font-mono text-[9px] uppercase tracking-wide text-rose-100/80"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="mt-auto flex border-t border-rose-300/15 pt-4 text-xs uppercase tracking-wider">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex-1 text-zinc-400 transition hover:text-white"
-                      >
-                        GitHub ↗
-                      </a>
-                      {project.live ? (
-                        <a
-                          href={project.live}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-rose-300 transition hover:text-white"
-                        >
-                          Inspect report ↗
-                        </a>
-                      ) : null}
-                    </div>
-                  </div>
-                </article>
-              );
-            }
-
-            return (
-              <div
-                key={project.title}
-                className="elias-card group overflow-hidden rounded-lg flex flex-col transition hover:border-[#00f5a0] hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(16,185,129,0.2)]"
-              >
-                <div className="relative h-48 overflow-hidden border-b border-zinc-800 bg-zinc-900">
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} project preview`}
-                    fill
-                    sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover object-top transition duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+              <div className="flex-1 p-6 flex flex-col">
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {project.tech.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-zinc-900 px-2 py-1 text-xs text-[#00f5a0] border border-zinc-700"
+                    >
+                      {item}
+                    </span>
+                  ))}
                 </div>
 
-                <div className="flex-1 p-6 flex flex-col">
-                  <div className="mb-4 flex flex-wrap gap-2">
-                    {project.tech.map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-full bg-zinc-900 px-2 py-1 text-xs text-[#00f5a0] border border-zinc-700"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
 
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="body-text text-sm flex-1 mb-6">
+                  {project.description}
+                </p>
 
-                  <p className="body-text text-sm flex-1 mb-6">
-                    {project.description}
-                  </p>
+                <div className="flex gap-3 pt-4 border-t border-zinc-700">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 text-center text-sm text-[#00f5a0] hover:bg-zinc-900 py-2 rounded transition"
+                  >
+                    GitHub
+                  </a>
 
-                  <div className="flex gap-3 pt-4 border-t border-zinc-700">
+                  {project.live && (
                     <a
-                      href={project.github}
+                      href={project.live}
                       target="_blank"
                       rel="noreferrer"
                       className="flex-1 text-center text-sm text-[#00f5a0] hover:bg-zinc-900 py-2 rounded transition"
                     >
-                      GitHub
+                      Live Demo
                     </a>
-
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex-1 text-center text-sm text-[#00f5a0] hover:bg-zinc-900 py-2 rounded transition"
-                      >
-                        Live Demo
-                      </a>
-                    )}
-                  </div>
+                  )}
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </section>
 
