@@ -43,7 +43,7 @@ function getBaxAIResponse(input: string) {
     message.includes("kernel") ||
     message.includes("bootloader")
   ) {
-    return "Bax OS is Julian’s educational x86_64 hobby operating system. A 512-byte BIOS boot sector loads a freestanding C kernel, establishes identity-mapped paging, and enters 64-bit long mode. The source includes VGA and COM1 output, an IDT with PIC remapping, PIT timer code, PS/2 keyboard input, and a shell with help, clear, about, and uptime commands. The image compiles successfully; native QEMU runtime verification is still documented as pending.";
+    return "Bax OS is Julian’s educational x86_64 hobby operating system. A 512-byte BIOS boot sector loads a freestanding C kernel, establishes identity-mapped paging, enables SSE state, and enters 64-bit long mode. The source includes VGA and COM1 output, an IDT with PIC remapping, PIT timer code, PS/2 keyboard input, and a shell with help, clear, about, and uptime commands. It is verified on QEMU 11.1: the VM stays running, timer interrupts advance, and automated PS/2 input successfully executes help and uptime through the COM1 serial console.";
   }
 
   if (
