@@ -19,6 +19,16 @@ const quickQuestions = [
 function getBaxAIResponse(input: string) {
   const message = input.toLowerCase();
 
+  if (message.includes("taskforge") || message.includes("job queue")) {
+    return "TaskForge is Julian's distributed Python job-processing backend with PostgreSQL history, Redis priorities, concurrent workers, retries, timeouts, and fenced leases. Its verified CI benchmark completed 100 jobs across 8 workers and recovered all 10 intentional transient failures. Source: https://github.com/jdbartlett929/taskforge. Cloud deployment is prepared, not publicly running.";
+  }
+  if (message.includes("signaldock") || message.includes("log analytics")) {
+    return "SignalDock is Julian's cloud log and analytics backend. It durably accepts event batches, uses Redis Streams workers with replay recovery, and exposes PostgreSQL-backed search, error rates, latency metrics, and worker monitoring. Source: https://github.com/jdbartlett929/signaldock. Docker and cloud deployment files are included; no paid cloud deployment is claimed.";
+  }
+  if (message.includes("vaultline") || message.includes("cloud file storage")) {
+    return "Vaultline is Julian's versioned file-storage service with JWT accounts, PostgreSQL metadata, S3-compatible storage, SHA-256 deduplication within an owner's account, read-only sharing, and expiring download links. Local Docker uses MinIO; AWS deployment configuration is included. Source: https://github.com/jdbartlett929/vaultline. It is not publicly hosted on AWS yet.";
+  }
+
   if (
     message.includes("view first") ||
     message.includes("best project") ||

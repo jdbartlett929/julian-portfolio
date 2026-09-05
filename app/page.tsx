@@ -3,7 +3,45 @@ import Navbar from "@/components/Navbar";
 import TechMarquee from "@/components/TechMarquee";
 import Image from "next/image";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  github: string;
+  live?: string;
+  image?: string;
+  architecture?: string[];
+  docs?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: "TaskForge — Distributed Job Queue",
+    description:
+      "A Python task-processing system with PostgreSQL job history, Redis priorities, concurrent workers, fenced leases, retries, and timeouts. Verified with 100 jobs across 8 workers and recovery of all 10 deliberate transient failures.",
+    tech: ["Python", "FastAPI", "PostgreSQL", "Redis", "Docker", "pytest"],
+    github: "https://github.com/jdbartlett929/taskforge",
+    docs: "https://github.com/jdbartlett929/taskforge/blob/main/docs/ARCHITECTURE.md",
+    architecture: ["REST API", "Priority queue", "Worker fleet"],
+  },
+  {
+    title: "SignalDock — Cloud Log & Analytics",
+    description:
+      "A durable event-ingestion platform with Redis Streams consumers, replay-safe PostgreSQL indexing, searchable logs, error-rate and latency analytics, and worker monitoring. Includes automated integration and Docker tests.",
+    tech: ["Python", "FastAPI", "PostgreSQL", "Redis Streams", "Docker", "GitHub Actions"],
+    github: "https://github.com/jdbartlett929/signaldock",
+    docs: "https://github.com/jdbartlett929/signaldock#processing-guarantees-and-limits",
+    architecture: ["Event batches", "Stream consumers", "Log analytics"],
+  },
+  {
+    title: "Vaultline — Cloud File Storage",
+    description:
+      "A versioned file-storage backend with JWT accounts, PostgreSQL metadata, S3-compatible objects, SHA-256 deduplication, read-only sharing, and expiring download links. Includes a file workspace and AWS deployment configuration.",
+    tech: ["Python", "FastAPI", "PostgreSQL", "AWS S3", "JWT", "Docker"],
+    github: "https://github.com/jdbartlett929/vaultline",
+    docs: "https://github.com/jdbartlett929/vaultline#storage-design",
+    architecture: ["JWT access", "File versions", "Private objects"],
+  },
   {
     title: "Bax OS / Hobby Operating System",
     description:
@@ -310,13 +348,26 @@ export default function Home() {
               className="elias-card group overflow-hidden rounded-lg flex flex-col transition hover:border-[#00f5a0] hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(16,185,129,0.2)]"
             >
               <div className="relative h-48 overflow-hidden border-b border-zinc-800 bg-zinc-900">
-                <Image
+                {project.image ? <Image
                   src={project.image}
                   alt={`${project.title} project preview`}
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"
                   className="object-cover object-top transition duration-500 group-hover:scale-105"
-                />
+                /> : (
+                  <div className="flex h-full flex-col justify-center gap-4 px-6">
+                    <p className="text-xs tracking-[0.18em] text-zinc-400">BACKEND / INFRASTRUCTURE</p>
+                    <ol className="flex flex-wrap items-center gap-2" aria-label="System flow">
+                      {project.architecture?.map((step, index) => (
+                        <li key={step} className="flex items-center gap-2">
+                          {index > 0 && <span aria-hidden="true" className="text-[#00f5a0]">→</span>}
+                          <span className="rounded border border-zinc-600 bg-black/30 px-3 py-2 text-sm text-zinc-100">{step}</span>
+                        </li>
+                      ))}
+                    </ol>
+                    <p className="text-xs text-zinc-400">Source code · Docker services · Automated tests</p>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
               </div>
 
@@ -358,7 +409,14 @@ export default function Home() {
                       Live Demo
                     </a>
                   )}
+                  {project.docs && (
+                    <a href={project.docs} target="_blank" rel="noreferrer"
+                      className="flex-1 text-center text-sm text-[#00f5a0] hover:bg-zinc-900 py-2 rounded transition">
+                      Architecture
+                    </a>
+                  )}
                 </div>
+                {project.docs && <p className="mt-3 text-xs leading-relaxed text-zinc-400">Cloud deployment prepared; backend not publicly hosted.</p>}
               </div>
             </div>
           ))}
