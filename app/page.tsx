@@ -22,7 +22,7 @@ const projects: Project[] = [
     tech: ["Python", "FastAPI", "PostgreSQL", "Redis", "Docker", "pytest"],
     github: "https://github.com/jdbartlett929/taskforge",
     docs: "https://github.com/jdbartlett929/taskforge/blob/main/docs/ARCHITECTURE.md",
-    architecture: ["REST API", "Priority queue", "Worker fleet"],
+    image: "/project-images/taskforge.png",
   },
   {
     title: "SignalDock — Cloud Log & Analytics",
@@ -31,7 +31,7 @@ const projects: Project[] = [
     tech: ["Python", "FastAPI", "PostgreSQL", "Redis Streams", "Docker", "GitHub Actions"],
     github: "https://github.com/jdbartlett929/signaldock",
     docs: "https://github.com/jdbartlett929/signaldock#processing-guarantees-and-limits",
-    architecture: ["Event batches", "Stream consumers", "Log analytics"],
+    image: "/project-images/signaldock.png",
   },
   {
     title: "Vaultline — Cloud File Storage",
@@ -40,7 +40,7 @@ const projects: Project[] = [
     tech: ["Python", "FastAPI", "PostgreSQL", "AWS S3", "JWT", "Docker"],
     github: "https://github.com/jdbartlett929/vaultline",
     docs: "https://github.com/jdbartlett929/vaultline#storage-design",
-    architecture: ["JWT access", "File versions", "Private objects"],
+    image: "/project-images/vaultline.png",
   },
   {
     title: "Bax OS / Hobby Operating System",
