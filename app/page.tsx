@@ -416,7 +416,6 @@ export default function Home() {
                     </a>
                   )}
                 </div>
-                {project.docs && <p className="mt-3 text-xs leading-relaxed text-zinc-400">Cloud deployment prepared; backend not publicly hosted.</p>}
               </div>
             </div>
           ))}
