@@ -16,6 +16,15 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Skyline Weather",
+    description:
+      "A responsive weather forecast workspace with live city search, current conditions, an interactive hourly temperature chart, seven-day outlooks, saved places, and Fahrenheit/Celsius switching.",
+    tech: ["JavaScript", "Open-Meteo API", "CSS", "Local Storage", "Node.js"],
+    github: "https://github.com/jdbartlett929/skyline-weather",
+    live: "https://skyline-weather-julian.baxman929.chatgpt.site",
+    image: "/project-images/skyline-weather.png",
+  },
+  {
     title: "TaskForge — Distributed Job Queue",
     description:
       "A Python task-processing system with PostgreSQL job history, Redis priorities, concurrent workers, fenced leases, retries, and timeouts. Verified with 100 jobs across 8 workers and recovery of all 10 deliberate transient failures.",

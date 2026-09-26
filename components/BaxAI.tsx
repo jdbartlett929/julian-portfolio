@@ -19,6 +19,10 @@ const quickQuestions = [
 function getBaxAIResponse(input: string) {
   const message = input.toLowerCase();
 
+  if (message.includes("skyline") || message.includes("weather forecast") || message.includes("weather app")) {
+    return "Skyline Weather is Julian's live forecast app. It searches cities, shows current conditions and a seven-day outlook, draws an hourly temperature trend, switches between Fahrenheit and Celsius, and saves places in the browser. It uses Open-Meteo data, handles slow or incomplete responses, and runs automated tests. Try it at https://skyline-weather-julian.baxman929.chatgpt.site or see the code at https://github.com/jdbartlett929/skyline-weather.";
+  }
+
   if (message.includes("taskforge") || message.includes("job queue")) {
     return "TaskForge is Julian's distributed Python job-processing backend with PostgreSQL history, Redis priorities, concurrent workers, retries, timeouts, and fenced leases. Its verified CI benchmark completed 100 jobs across 8 workers and recovered all 10 intentional transient failures. Source: https://github.com/jdbartlett929/taskforge. Cloud deployment is prepared, not publicly running.";
   }
@@ -89,7 +93,7 @@ function getBaxAIResponse(input: string) {
     message.includes("built") ||
     message.includes("portfolio")
   ) {
-    return "Julian’s portfolio includes Bax OS, the Stock Market Predictor, Sentinel LLM Regression Guard, Ledger Local Spending Tracker, Aegis Command, Atlas Agent, CloudQueue, Online Voting System, CareerPilot, FileGuard Pro, StreamVault, DevBoard, Task Tracker, and his personal portfolio. The work spans operating systems, machine learning, CI evaluation, privacy-focused financial tooling, voice interfaces, browser automation, AWS architecture, cybersecurity, analytics, responsive UI, and production deployment.";
+    return "Julian’s portfolio includes Skyline Weather, TaskForge, SignalDock, Vaultline, Bax OS, the Stock Market Predictor, Sentinel LLM Regression Guard, Ledger Local Spending Tracker, Aegis Command, Atlas Agent, CloudQueue, Online Voting System, CareerPilot, FileGuard Pro, StreamVault, DevBoard, Task Tracker, and his personal portfolio. The work spans weather APIs, backend systems, operating systems, machine learning, CI evaluation, privacy-focused financial tooling, voice interfaces, browser automation, AWS architecture, cybersecurity, analytics, responsive UI, and production deployment.";
   }
 
   if (
