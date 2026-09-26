@@ -20,7 +20,7 @@ function getBaxAIResponse(input: string) {
   const message = input.toLowerCase();
 
   if (message.includes("skyline") || message.includes("weather forecast") || message.includes("weather app")) {
-    return "Skyline Weather is Julian's live forecast app. It searches cities, shows current conditions and a seven-day outlook, draws an hourly temperature trend, switches between Fahrenheit and Celsius, and saves places in the browser. It uses Open-Meteo data, handles slow or incomplete responses, and runs automated tests. Try it at https://skyline-weather-julian.baxman929.chatgpt.site or see the code at https://github.com/jdbartlett929/skyline-weather.";
+    return "Skyline Weather is Julian's live forecast app. It searches cities, shows current conditions and a seven-day outlook, draws an hourly temperature trend, switches between Fahrenheit and Celsius, and saves places in the browser. It uses Open-Meteo data, handles slow or incomplete responses, and runs automated tests. Try it at https://skyline-weather-murex.vercel.app or see the code at https://github.com/jdbartlett929/skyline-weather.";
   }
 
   if (message.includes("taskforge") || message.includes("job queue")) {

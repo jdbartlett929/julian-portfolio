@@ -21,7 +21,7 @@ const projects: Project[] = [
       "A responsive weather forecast workspace with live city search, current conditions, an interactive hourly temperature chart, seven-day outlooks, saved places, and Fahrenheit/Celsius switching.",
     tech: ["JavaScript", "Open-Meteo API", "CSS", "Local Storage", "Node.js"],
     github: "https://github.com/jdbartlett929/skyline-weather",
-    live: "https://skyline-weather-julian.baxman929.chatgpt.site",
+    live: "https://skyline-weather-murex.vercel.app",
     image: "/project-images/skyline-weather.png",
   },
   {
