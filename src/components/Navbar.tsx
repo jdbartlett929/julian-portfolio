@@ -22,6 +22,14 @@ export default function Navbar() {
           <a href="#projects" className="transition hover:text-white">
             Projects
           </a>
+          <a
+            href="/Julian-Bartlett-Resume-Summer-2027.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="transition hover:text-white"
+          >
+            Resume
+          </a>
           <a href="#contact" className="transition hover:text-white">
             Connect
           </a>
@@ -67,6 +75,15 @@ export default function Navbar() {
               className="transition hover:text-white"
             >
               Projects
+            </a>
+            <a
+              href="/Julian-Bartlett-Resume-Summer-2027.pdf"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="transition hover:text-white"
+            >
+              Resume
             </a>
             <a
               href="#contact"

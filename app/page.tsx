@@ -303,6 +303,15 @@ export default function Home() {
             >
               Contact
             </a>
+
+            <a
+              href="/Julian-Bartlett-Resume-Summer-2027.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl border border-zinc-700 px-6 py-3 transition hover:border-zinc-500"
+            >
+              View Resume
+            </a>
           </div>
         </div>
 
